@@ -33,4 +33,18 @@ const myFunction = function () {
     console.log("Hello world!")
 }                               //Function
 
-console.log([`city: ${typeof (city)}`, `score: ${typeof score}`, `scoreValue: ${typeof scoreValue}`, `isLoggedIn: ${typeof isLoggedIn}`, `outsideTemp: ${typeof outsideTemp}`, `userEmail: ${typeof userEmail}`, `id: ${typeof id}`, `anotherId: ${typeof anotherId}`, `bigNumber: ${typeof bigNumber}`, `heros: ${typeof heros}`, `car: ${typeof car}`, `myFunction: ${typeof myFunction}`])
+console.log(
+    [
+        `city: ${typeof (city)}`,
+        `score: ${typeof score}`,
+        `scoreValue: ${typeof scoreValue}`,
+        `isLoggedIn: ${typeof isLoggedIn}`,
+        `outsideTemp: ${typeof outsideTemp}`,
+        `userEmail: ${typeof userEmail}`,
+        `id: ${typeof id}`,
+        `anotherId: ${typeof anotherId}`,
+        `bigNumber: ${typeof bigNumber}`,
+        `heros: ${typeof heros}`,
+        `car: ${typeof car}`,
+        `myFunction: ${typeof myFunction}`
+    ])
