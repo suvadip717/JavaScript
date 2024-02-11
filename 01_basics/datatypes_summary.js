@@ -48,3 +48,27 @@ console.log(
         `car: ${typeof car}`,
         `myFunction: ${typeof myFunction}`
     ])
+
+
+// *********************************************** Stack(Primitive) & Heap(Non-primitive) ***********************************************
+
+let school = 'HighSchool'
+let mySchool = school
+mySchool = 'PrimarySchool'
+
+console.log(school)
+console.log(mySchool)
+
+let userOne = {
+    email: 'user77@gmail.com',
+    upi: 'user34@ybl'
+}
+
+let userTwo = userOne
+
+userTwo.email= 'user877@gmail.com',
+userTwo.upi = 'user88@okzxis'
+
+
+console.log(userOne)
+console.log(userTwo)
