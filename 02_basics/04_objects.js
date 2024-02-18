@@ -66,3 +66,19 @@ console.log(Object.keys(tinderUser))    // [ 'id', 'name', 'isLoggedIn' ]
 console.log(Object.values(tinderUser))  // [ '123abc', 'Sammi', false ]
 console.log(Object.entries(tinderUser))  // [ [ 'id', '123abc' ], [ 'name', 'Sammi' ], [ 'isLoggedIn', false ] ]
 console.log(tinderUser.hasOwnProperty("isLoggedIn"))    //true
+
+
+// Object de-structure
+const course = {
+    courceName : "Js",
+    price: "999",
+    courseStudent: "Akash"
+}
+
+// cource.courseStudent
+
+const {courseStudent} = course
+const {courseStudent: student} = course
+
+console.log(courseStudent)  //Akash
+console.log(student)  //Akash
