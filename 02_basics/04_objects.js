@@ -65,4 +65,4 @@ console.log(User[2].email)  //dfes@gmail.com
 console.log(Object.keys(tinderUser))    // [ 'id', 'name', 'isLoggedIn' ]
 console.log(Object.values(tinderUser))  // [ '123abc', 'Sammi', false ]
 console.log(Object.entries(tinderUser))  // [ [ 'id', '123abc' ], [ 'name', 'Sammi' ], [ 'isLoggedIn', false ] ]
-console.log(tinderUser.hasOwnProperty("isLoggedIn"))
+console.log(tinderUser.hasOwnProperty("isLoggedIn"))    //true
