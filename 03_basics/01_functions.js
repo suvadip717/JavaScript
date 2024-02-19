@@ -51,3 +51,35 @@ function LogUser(user='Somnath'){
 
 console.log(LogUser('Satish'))  //Satish
 console.log(LogUser())  //Somnath
+
+
+function calculatePrice(val1,val2,...num1){
+    return num1
+}
+
+console.log(calculatePrice(200,500,730,674,210))    //[ 730, 674, 210 ]
+
+
+const user = {
+    username: "Akash",
+    price: 839,
+}
+
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`)    
+}
+
+handleObject(user)  // Username is Akash and price is 839
+handleObject({
+    username:"shammy",      // Username is shammy and price is 673
+    price:673
+})
+
+const myNewArray = [45,23,78,90]
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+
+console.log(returnSecondValue(myNewArray))  //23
+console.log(returnSecondValue([45,67,23,90]))  //67
