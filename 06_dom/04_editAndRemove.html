@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom tutorial</title>
+</head>
+<body style="background-color: #212121; color: #ffffff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(language){
+        const li = document.createElement('li')
+        li.innerHTML=`${language}`
+        document.querySelector('.language').append(li)
+    }
+    addLanguage("Python")
+
+    function addLangOpti(language){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(language))
+        document.querySelector('.language').append(li)
+    }
+    addLangOpti("C++")
+
+    //Editing
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML="Perl"
+    const newli= document.createElement("li")
+    newli.textContent="Rubby"
+    secondLang.replaceWith(newli)
+
+    //edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML="<li>TypeScript</li>"
+    
+    //remove
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+</script>
+</html>
