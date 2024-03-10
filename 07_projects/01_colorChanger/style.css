@@ -1,0 +1,63 @@
+html{
+    margin: 0;
+}
+
+span{
+    display: block;
+}
+
+.canvas{
+    margin: 100px auto 100px;
+    width: 80%;
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    border-bottom: solid 1px #aaaa;
+    background-color: #eee;
+}
+
+nav a{
+    display: inline-block;
+    min-width: 9rem;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    text-align: center;
+    color: #1b1b1b;
+    text-decoration: none;
+    border: 2px solid rgb(22, 22, 22);
+}
+
+nav a[aria-current='page'] {
+    color: #000;
+    background-color: #d4d4d4;
+}
+
+.button{
+    width: 200px;
+    height: 200px;
+    border: solid 2px #212121;
+    display: inline-block;
+}
+
+#grey{
+    background-color: gray;
+}
+
+#white{
+    background-color: white;
+}
+
+#blue{
+    background-color: blue;
+}
+
+#yellow{
+    background-color: yellow;
+}
