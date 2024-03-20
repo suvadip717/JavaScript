@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval</title>
+</head>
+
+<body>
+    <h1>Get ready for SetInterval</h1>
+    <button id="start">start it</button>
+    <button id="stop">stop it</button>
+</body>
+<script>
+    const setColor = () => {
+        const hex = "0987654321ABCDEF"
+        let colorCode = "#"
+        for (let i = 0; i < 6; i++) {
+            colorCode += hex[Math.floor(Math.random() * 16)]
+        }
+        return colorCode
+    }
+    // console.log(setColor())
+
+    let setTimeInterval
+    const changeBackground = function () {
+        if(!setTimeInterval){
+            setTimeInterval = setInterval(changeBgColor, 2000)
+        }
+        function changeBgColor() {
+            document.body.style.backgroundColor = setColor()
+        }
+    }
+
+    document.querySelector("#start").addEventListener("click", () => {
+        changeBackground()
+        console.log("start")
+    })
+
+    document.querySelector("#stop").addEventListener("click", () => {
+        clearInterval(setTimeInterval)
+        setTimeInterval=null
+        console.log("stop")
+    })
+</script>
+
+</html>
