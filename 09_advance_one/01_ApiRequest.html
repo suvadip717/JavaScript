@@ -1,25 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Api Request</title>
 </head>
-<body style="background-color: #212121;">
-    hello
+
+<body style="background-color: #212121; color: #ffffff;">
+    <h3>Please click the Button</h3>
+
+    <button onclick="displayText()">Click Me!</button>
+
+
+    <div class="card" style="display: none;">
+        <img src="img_avatar.png" alt="Avatar" style="width:30%; height:30%">
+        <div class="container">
+            <h4><b></b></h4>
+        </div>
+    </div>
+
+
+
 </body>
-    <script>
-        const requestUrl = "https://api.github.com/users/suvadip717"
-        const xhr = new XMLHttpRequest()
-        xhr.open('GET',requestUrl)
-        xhr.onreadystatechange = function(){
-            console.log(xhr.readyState)
-            if(xhr.readyState === 4){
-                const data = JSON.parse(this.responseText)
-                console.log(data)
-                console.log(data.followers)
-            }
+<script>
+    const requestUrl = "https://api.github.com/users/suvadip717"
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState)
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            // display picture
+            let imgPic = document.querySelector("img")
+            imgPic.src = data.avatar_url
+            // followers
+            let followers = document.querySelector("b")
+            followers.innerHTML = data.followers
+
+            console.log(data)
+            console.log(data.followers)
         }
-        xhr.send()
-    </script>
+    }
+    xhr.send()
+
+    function displayText() {
+        var text = document.querySelector(".card");
+        text.style.display = "block";
+    }
+
+</script>
+
 </html>
